@@ -1,0 +1,11 @@
+function solve(n, m){
+let firstNum = Number(n);
+let secondNum = Number(m);
+let result=0;
+for (let i = firstNum; i <= secondNum; i++){
+    result +=Number(i);   
+}
+return result;
+}
+
+console.log(solve('1', '5'));
