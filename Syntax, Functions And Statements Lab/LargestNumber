@@ -1,0 +1,16 @@
+function largestNumber (first, sec, third){
+    
+    let bigestNumber =-2147483648;
+    let arr = [first,sec,third];
+    for (let index = 0; index < arr.length; index++) {
+       let element = Number(arr[index]);
+       if(element>bigestNumber){
+           bigestNumber=element;
+       }
+    }
+    let result =Number(bigestNumber);
+    console.log( `The largest number is ${result}.`);
+}
+
+largestNumber(5, -3, 16);
+largestNumber(-3, -5, -22.5);
