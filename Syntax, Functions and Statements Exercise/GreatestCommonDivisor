@@ -1,0 +1,9 @@
+function commonDivisor(first, second){
+    
+    while (second) {
+        let num3 = second;
+        second = first % second;
+        first = num3;
+    }
+    console.log(first);
+}
