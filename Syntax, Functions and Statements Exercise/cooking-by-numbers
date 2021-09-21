@@ -1,0 +1,30 @@
+function cooking(...params){
+    
+    let arr= Array.of(...params);
+    let number = Number(arr[0]);
+    for (let i = 1; i < arr.length; i++) {
+        let comand = arr[i];
+        switch(comand){
+        case 'chop':
+            number=number/2;
+          
+        break;
+        case 'dice':Math.sqrt(number,2);
+        break;
+        case 'spice':
+            number+=number;
+           
+        break;
+        case 'bake':
+            number=number*3;
+           
+        break;
+        case 'fillet': number = number- (number*0.2);
+        break;
+        }
+        console.log(number);
+    }
+
+
+}
+cooking('32', 'chop', 'chop', 'chop', 'chop', 'chop');
