@@ -1,0 +1,72 @@
+function roadRadar(number, type){
+let speed = number;
+let result = '';
+let limit =0;
+let status ="";
+switch (type){
+case 'motorway': limit = 130;
+if(speed<=limit){
+    result = `Driving ${speed} km/h in a ${limit} zone`
+}else if(speed>limit&&speed<=(limit+20)){
+    status = 'speeding';
+    result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+}else if(speed>limit&&speed<=(limit+40)){
+    status = 'excessive speeding';
+    result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+}else{
+    status = 'reckless driving';
+    result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+}
+break;
+case 'interstate':
+    limit = 90;
+    if(speed<=limit){
+        result = `Driving ${speed} km/h in a ${limit} zone`
+    }else if(speed>limit&&speed<=(limit+20)){
+        status = 'speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else if(speed>limit&&speed<=(limit+40)){
+        status = 'excessive speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else{
+        status = 'reckless driving';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }
+break;
+case 'city':
+    limit = 50;
+    if(speed<=limit){
+        result = `Driving ${speed} km/h in a ${limit} zone`
+    }else if(speed>limit&&speed<=(limit+20)){
+        status = 'speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else if(speed>limit&&speed<=(limit+40)){
+        status = 'excessive speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else{
+        status = 'reckless driving';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }
+break;
+case 'residential':
+    limit = 20;
+    if(speed<=limit){
+        result = `Driving ${speed} km/h in a ${limit} zone`
+    }else if(speed>limit&&speed<=(limit+20)){
+        status = 'speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else if(speed>limit&&speed<=(limit+40)){
+        status = 'excessive speeding';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }else{
+        status = 'reckless driving';
+        result = `The speed is ${speed-limit} km/h faster than the allowed speed of ${limit} - ${status}`
+    }
+break; 
+
+}
+switch(speed){
+
+}
+return result;
+}
