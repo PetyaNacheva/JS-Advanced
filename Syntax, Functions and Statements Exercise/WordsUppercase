@@ -1,0 +1,5 @@
+function wordUppercase(input){
+
+    result = input.toUpperCase().match(/\w+/g).join(", ");
+    return result;
+}
