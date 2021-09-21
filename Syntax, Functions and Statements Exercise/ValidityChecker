@@ -1,0 +1,46 @@
+function validityChecker(x1, y1, x2, y2){
+
+
+    let checkFirstPoint = firstPoint(x1);
+    let checkSecondPoint = secondPoint(x1);
+    let checkThirdPoint = thirdPoint(x1);
+
+
+    function firstPoint() {
+        let checkOne = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2));
+
+        return checkOne;
+    }
+
+    function secondPoint() {
+        let checkSecond = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
+
+        return checkSecond;
+    }
+
+
+    function thirdPoint() {
+        let checkThird = Math.sqrt(Math.pow(Math.abs(x2 - x1), 2) + Math.pow(Math.abs(y2 - y1), 2));
+
+
+        return checkThird;
+    }
+
+
+    if (checkFirstPoint === Math.trunc(checkFirstPoint)) {
+        console.log(`{${x1}, ${y1}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {0, 0} is invalid`);
+    }
+    if (checkSecondPoint === Math.trunc(checkSecondPoint)) {
+        console.log(`{${x2}, ${y2}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x2}, ${y2}} to {0, 0} is invalid`);
+    }
+
+    if (checkThirdPoint === Math.trunc(checkThirdPoint)) {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`)
+    } else {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`)
+    }
+}
