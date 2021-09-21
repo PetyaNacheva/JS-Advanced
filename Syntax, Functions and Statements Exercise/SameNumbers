@@ -1,0 +1,16 @@
+function sameNumbers(input){
+    let numebr = String(input);
+    let isSame=true;
+    let first=Number(numebr[0]);
+    let sum =Number(first);
+    for (let i = 1; i < numebr.length; i++) {
+        if(first!=numebr[i]){
+            isSame = false;
+        }
+        sum+=Number(numebr[i]);
+    }
+
+    console.log(isSame+"\n"+sum);
+}
+sameNumbers(2222222);
+sameNumbers(1234)
